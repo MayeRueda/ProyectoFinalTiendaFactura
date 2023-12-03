@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Evita el margen predeterminado del cuerpo */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #212121e8;
+    color: rgba(255, 255, 255, 0.501);
+    padding: 7px;
+  }
+  
+  .logo img {
+    width: 50px;
+  }
+  
+  .app-name {
+    font-size: 24px;
+  }
+  
+  .admin-dropdown {
+    position: relative; /* Añadido para posicionar correctamente el cuadro desplegable */
+  }
+  
+  .admin-dropdown button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .admin-dropdown button:hover {
+    background-color: #444;
+  }
+  
+  .admin-options {
+    display: none;
+    background-color: #333;
+    position: absolute;
+    top: 100%; /* Mostrar debajo del botón */
+    right: 0; /* Alinear a la derecha */
+    z-index: 1;
+  }
+  
+  .admin-options a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .admin-options a:hover {
+    background-color: #444;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  /* Resto del código CSS */
+
+  .content {
+    display: flex;
+    flex-wrap: wrap; /* Permitir envolver en una nueva línea si no hay suficiente espacio */
+    height: calc(100vh - 60px); /* Altura de la ventana menos la altura de la barra */
+  }
+  
+  .box {
+    display: flex; /* Para que las cards estén en línea */
+    gap: 10px; /* Espacio entre las cards */
+  }
+  
+  .card {
+    flex: 1; /* Para que ocupen todo el espacio disponible en la caja */
+  }
+  #box1 {
+    width: 75%;
+    background-color: #f0f0f0;
+    margin-top: 13px;
+  }
+  #box2 {
+    width: 23%;
+    background-color: white; /* Cambiado a fondo blanco */
+    margin-left: 2%;
+    border-radius: 15px; /* Bordes semi redondeados */
+    border: 2px solid #212121e8;
+  }
+  .card {
+    margin-bottom: 20px; /* Espacio entre las cards */
+  }
+  .alert-bar {
+    background-color: #ffcc00; /* Color de fondo amarillo */
+    padding: 10px;
+    border-radius: 15px 15px 0 0; /* Bordes semi redondeados solo en la parte superior */
+    text-align: center;
+    font-weight: bold;
+  }
+
+.top-box {
+  height: 30px;
+  width: 100%;
+  background-color: yellow;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.bottom-box {
+  height: calc(100% - 30px);
+  width: 100%;
+  background-color: #f0f0f0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100% de la altura de la ventana */
+}
+
+.custom-button {
+  width: 60%;
+  height: 80%;
+  margin: 20px;
+  border: none;
+  background-color: #007bff; /* Color de fondo */
+  color: white; /* Color de texto */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}
+
+  
+  
+  
+  
+
+  

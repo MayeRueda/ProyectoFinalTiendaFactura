@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <title>Tu Aplicación</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="app-name-centered">
+            <div class="app-name">
+                JDK
+            </div>
+        </div>
+        <div class="admin-dropdown">
+            <button onclick="toggleDropdown()">Admin</button>
+            <div class="admin-options" id="admin-options">
+                <a href="#" onclick="mostraralertas()">Cerrar Sesión</a>
+                <a href="#" onclick="mostrarPreguntasFrecuentes()">Preguntas Frecuentes</a>
+                <a href="#" onclick="mostrarCerrarSesion()">Cerrar Sesión</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+    <div class="menu-lateral" id="menu-lateral">
+        <ul>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">Botón 2</a></li>
+            <li><a href="#">Botón 3</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div class="contenido">
+        <div class="center-container">
+            <a href="empleadosboton.html" class="custom-button red-button" >EMPLEADOS</a>
+            <a href="clienteboton.html"class="custom-button black-button">CLIENTES</a>
+    
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

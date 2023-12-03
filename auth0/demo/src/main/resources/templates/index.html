@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <title>Tu Aplicación</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/monokai-sublime.min.css"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+        <div class="navbar-brand">
+            <img src="/assets/logo.png" height="45px">
+        </div>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li sec:authorize="isAuthenticated()" class="nav-item">
+                    <a href="/empleados" class="nav-link">Empleados</a>
+                </li>
+                <li sec:authorize="isAuthenticated()" class="nav-item">
+                    <a href="/clientes" class="nav-link">Clientes</a>
+                </li>
+                <li sec:authorize="isAuthenticated()" class="nav-item">
+                    <a href="/" class="nav-link">Administrador</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav d-none d-md-block">
+
+                <li sec:authorize="!isAuthenticated()" class="nav-item">
+                    <a th:href="@{/oauth2/authorization/okta}" id="qsLoginBtn" class="btn btn-primary btn-margin">Login</a>
+                </li>
+                <li sec:authorize="isAuthenticated()" class="nav-item dropdown">
+                    <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="profileDropDown"
+                            data-toggle="dropdown"
+                    >
+                        <img th:src="${profile.get('picture')}"  alt="Profile picture" class="nav-user-profile rounded-circle" width="50"/>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-left">
+                        <div class="dropdown-header" th:text="${profile.get('name')}"></div>
+                        <form name="logoutForm" th:action="@{/logout}" method="post">
+                            <button type="submit" id="qsLogoutBtn" class="dropdown-item">
+                                <i class="fas fa-power-off mr-3"></i> Log out
+                            </button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+            <ul sec:authorize="!isAuthenticated()" class="navbar-nav d-md-none">
+                <a th:href="@{/oauth2/authorization/okta}" id="qsLoginBtn" class="btn btn-primary btn-block">Login</a>
+            </ul>
+            <ul sec:authorize="isAuthenticated()" class="navbar-nav d-md-none justify-content-between" style="min-height: 120px;">
+                <li class="nav-item">
+                        <span class="user-info">
+                            <img th:src="${profile.get('picture')}" alt="Profile picture" class="nav-user-profile d-inline-bloc rounded-circle mr-3" width="50"/>
+                            <h6 class="d-inline-block" th:text="${profile.get('name')}"></h6>
+                        </span>
+                </li>
+                <li>
+                    <i class="fas fa-user mr-3"></i>
+                    <a th:href="@{/profile}"> Profile</a>
+                </li>
+                <li>
+                    <form name="logoutForm" th:action="@{/logout}" method="post">
+                        <button type="submit" class="dropdown-item">
+                            <i class="fas fa-power-off mr-3"></i> Log out
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+

@@ -23,9 +23,9 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               
               <li class="nav-item active">
-                <a class="nav-link" href="pedidos.html">Pedidos</a>
+                <a class="nav-link" href="pedidoproducto.html">Pedido Producto</a>
               </li>
-      
+           
             </ul>
             <a href="#" class="d-flex align-items-center link-dark text-decoration-none mx-lg-4"aria-expanded="false">
                 <img src="assets/persona.png" alt="" width="32" height="32" class="rounded-circle me-2">
@@ -42,48 +42,40 @@
             <form id="formulario">
                 <div class="row">
                     <div class="mb-3 col-12 text-center">
-                        <p id="textoTitulo">Insertar | Actualizar Pedidos</p>
+                        <p id="textoTitulo">Insertar | Actualizar Pedido Productos</p>
                     </div>
                     <div class="mb-3 col-2">
                         <label class="form-label">Código</label>
-                        <input type="number" class="form-control" id="codigo"disabled>
-                    </div>
-                    <div class="mb-3 col-2">
-                        <label class="form-label">can_res</label>
-                        <input type="number" class="form-control" id="can_res"disabled>
-                    </div>
-                    <div class="mb-3 col-2">
-                        <label class="form-label">horapedido</label>
-                        <input type="number" class="form-control" id="horapedido"disabled>
-                    </div>
-                    <div class="mb-3 col-2">
-                        <label class="form-label">fechapedido</label>
-                        <input type="number" class="form-control" id="fechapedido"disabled>
+                        <input type="number" class="form-control" id="codigo" disabled>
                     </div>
                     <div class="mb-3 col-5"> 
-                        <label class="form-label">Cantidad Total</label>
+                        <label class="form-label">Cantidad</label>
                         <input type="number" class="form-control" id="cantidad">
                     </div>
                     <div class="mb-3 col-5"> 
-                        <label class="form-label">Costo Neto</label>
-                        <input type="number" class="form-control" id="costo">
+                        <label class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="precio">
                     </div>
-                    <div class="mb-3 col-12">
-                        <label class="form-label">NIT Distribuidor</label>
-                        <select class="form-select" id="distribuidor"></select>
+                    <div class="mb-3 col-6">
+                        <label class="form-label">Código Pedido</label>
+                        <select class="form-select" id="codigoPedido"></select>
                     </div>
-                    <button type="button" class="btn btn-success col-5 mx-5" onclick="insertarPedido()" id="agregar">Agregar</button>
-                    <button type="button" class="btn btn-primary col-5" disabled id="actualizar" onclick="actualizarPedido()">Actualizar</button>
+                    <div class="mb-3 col-6">
+                        <label class="form-label">Código Producto</label>
+                        <select class="form-select" id="codigoProducto"></select>
+                    </div>
+                    <button type="button" class="btn btn-success col-5 mx-5" onclick="insertarPedidoProducto()" id="agregar">Agregar</button>
+                    <button type="button" class="btn btn-primary col-5" disabled id="actualizar" onclick="actualizarPedidoProducto()">Actualizar</button>
                 </div>
             </form>
         </div>
         <div class="col-9 mt-5 mb-3">
-            <button type="button" class="btn btn-warning" onclick="buscarTodosLosPedidos()">Listar todos</button>
+            <button type="button" class="btn btn-warning" onclick="buscarTodosLosPedidoProductos()">Listar todos</button>
         </div>
         <div class="col-3 mt-5 mb-3">
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Id" aria-label="Search" id="porId">
-                <button class="btn btn-primary" type="button" onclick="buscarPedidoPorId()">Buscar</button>
+                <button class="btn btn-primary" type="button" onclick="buscarPedidoProductoPorId()">Buscar</button>
             </form>
         </div>
         <div class="col-12">
@@ -91,12 +83,10 @@
                 <thead>
                 <tr>
                     <th scope="col">Código</th>
-                    <th scope="col">fechapedido</th>
-                    <th scope="col">horapedido</th>
-                    <th scope="col">can_res</th>
-                    <th scope="col">Cantidad Total</th>
-                    <th scope="col">Costo Neto</th>
-                    <th scope="col">NIT Distribuidor</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Código Pedido</th>
+                    <th scope="col">Código Producto</th>
                     <th scope="col"></th>
                 </tr>
                 </thead>
@@ -122,7 +112,7 @@
     </div>
 </div>
 
-<script src="js/pedidos.js"></script>
+<script src="js/pedidoproductos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>

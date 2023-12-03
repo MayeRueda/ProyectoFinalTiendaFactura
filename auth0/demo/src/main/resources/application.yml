@@ -1,0 +1,6 @@
+# src/main/resources/application.yml
+okta:
+  oauth2:
+    issuer: https://dev-vjfax87m664gtfwa.us.auth0.com/
+    client-id: BLkb4F40u1h5Rm4Mt3PK3xHgpEGwh6cT
+    client-secret: 3yL4KlhGXXDFuKC9sHbiZ_-QU5J0DrVr3ps1czpvo4CPBfLXrniqqk785hRn0c75
