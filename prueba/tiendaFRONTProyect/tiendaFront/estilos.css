@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative; /* Establecemos la posición a relativa en el body */
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2; /* Establecemos un valor mayor de z-index */
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s;
+    z-index: 1; /* Establecemos un valor menor de z-index */
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-lateral li {
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-lateral a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0; /* Establecemos un valor aún menor de z-index */
+    display: none;
+}
+
+.contenido {
+    margin-left: 0;
+    transition: margin-left 0.3s;
+    padding: 20px;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #212121e8;
+    color: rgba(255, 255, 255, 0.501);
+    padding: 7px;
+  }
+  
+  
+/* Agrega estos estilos para centrar el texto "JDK" */
+.app-name-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%; /* Agrega esto para que ocupe todo el ancho */
+}
+
+.app-name {
+    font-size: 24px; /* Tamaño de fuente opcional */
+    color: white; /* Color del texto */
+}
+
+
+  
+  .admin-dropdown {
+    position: relative; /* Añadido para posicionar correctamente el cuadro desplegable */
+  }
+  
+  .admin-dropdown button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .admin-dropdown button:hover {
+    background-color: #444;
+  }
+  
+  .admin-options {
+    display: none;
+    background-color: #333;
+    position: absolute;
+    top: 100%; /* Mostrar debajo del botón */
+    right: 0; /* Alinear a la derecha */
+    z-index: 1;
+  }
+  
+  .admin-options a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .admin-options a:hover {
+    background-color: #444;
+  }
+  
+.center-container {
+    display: flex;
+    text-align: center; 
+    align-items: center;
+    height: 100vh;
+}
+
+.custom-button {
+    width: 60%;
+    height: 80%;
+    margin: 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Estilos para el botón rojo */
+.red-button {
+    background-color: red;
+}
+
+/* Estilos para el botón negro */
+.black-button {
+    background-color: rgb(11, 0, 169);
+}
+
+
+.boton1-button {
+
+  background-color: #00278f;
+  width: 400px;
+height: 250px;
+}
+
+.boton2-button {
+  background-color: #5545c3;
+  width: 400px;
+  height: 250px;
+}
+
+.boton3-button {
+  background-color: #6a1c8e;
+  width: 400px;
+  height: 250px;
+}
+
+.boton4-button {
+  background-color: #b84aff;
+  width: 400px;
+  height: 250px;
+}
+
+  

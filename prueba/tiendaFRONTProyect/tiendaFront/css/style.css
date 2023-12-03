@@ -1,0 +1,41 @@
+#navbarB{
+    background-color: #333333;
+}
+
+#tabla thead tr th{
+    background-color: #333333;
+    color: white;
+}
+#tabla tbody tr td{
+
+    background-color: #7777;
+} 
+
+
+
+.nav-link{
+    color:white !important;
+}
+.active{
+    font-weight: bold !important; 
+
+}
+.nav-item .nav-link:hover{
+    color: white !important; 
+}
+#colortext{
+    color: white;
+}
+body{
+    background-color: white !important;
+}
+#textoTitulo{
+    font-size: 20px !important;
+    font-weight: bold;
+}
+#formulario{
+    background-color: #7777;
+    border-radius: 20px; 
+    padding: 20px ;
+    margin-top: 5px;
+}
